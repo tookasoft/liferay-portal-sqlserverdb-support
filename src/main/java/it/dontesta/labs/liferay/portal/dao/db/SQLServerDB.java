@@ -216,6 +216,5 @@ public class SQLServerDB extends BaseDB {
 			};
 
 			private static final int _SQL_SERVER_2000 = 8;
-
 			private static final boolean _SUPPORTS_ALTER_COLUMN_TYPE = false;
 }
