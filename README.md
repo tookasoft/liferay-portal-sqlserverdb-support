@@ -116,7 +116,7 @@ Below you can see the portal-ext.properties
     # SQL Server
     #
     jdbc.default.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
-    jdbc.default.username=liferayce7
+    jdbc.default.username=liferay
     jdbc.default.password=liferay12345
     jdbc.default.url=jdbc:sqlserver://sqlserverdb.vm.local;databaseName=liferayce7
 
@@ -137,8 +137,6 @@ Below you can see the portal-ext.properties
     #
     setup.wizard.enabled=false
 ```
-
-You can see the my complete [catalina.out](https://gist.github.com/amusarra/7f7d5c2f4d73e88f55f092d4d1853ff9) log file and following some screenshots of DB.
 
 ![Liferay CE 7 GA1 on SQLServer DB ](http://www.dontesta.it/blog/wp-content/uploads/2014/02/Liferay7CEOnSQLServerDB.png)
 
