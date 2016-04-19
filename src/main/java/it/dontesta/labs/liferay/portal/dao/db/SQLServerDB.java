@@ -60,9 +60,9 @@ public class SQLServerDB extends BaseDB {
 			return template;
 		}
 
-		@Override
-		public List<Index> getIndexes(Connection con) throws SQLException {
-			List<Index> indexes = new ArrayList<Index>();
+	@Override
+	public List<Index> getIndexes(Connection con) throws SQLException {
+		List<Index> indexes = new ArrayList<>();
 
 			PreparedStatement ps = null;
 			ResultSet rs = null;
@@ -96,12 +96,12 @@ public class SQLServerDB extends BaseDB {
 					String tableName = rs.getString("table_name");
 					boolean unique = !rs.getBoolean("is_unique");
 
-					indexes.add(new Index(indexName, tableName, unique));
-				}
+				indexes.add(new Index(indexName, tableName, unique));
 			}
-			finally {
-				DataAccess.cleanUp(null, ps, rs);
-			}
+		}
+		finally {
+			DataAccess.cleanUp(ps, rs);
+		}
 
 			return indexes;
 		}
@@ -154,10 +154,10 @@ public class SQLServerDB extends BaseDB {
 				return _SQL_SERVER;
 			}
 
-			@Override
-			protected String reword(String data) throws IOException {
-				UnsyncBufferedReader unsyncBufferedReader = new UnsyncBufferedReader(
-					new UnsyncStringReader(data));
+	@Override
+	protected String reword(String data) throws IOException {
+		try (UnsyncBufferedReader unsyncBufferedReader =
+				new UnsyncBufferedReader(new UnsyncStringReader(data))) {
 
 				StringBundler sb = new StringBundler();
 
@@ -167,13 +167,13 @@ public class SQLServerDB extends BaseDB {
 					if (line.startsWith(ALTER_COLUMN_NAME)) {
 						String[] template = buildColumnNameTokens(line);
 
-						line = StringUtil.replace(
-							"exec sp_rename '@table@.@old-column@', '@new-column@', " +
-								"'column';",
-							REWORD_TEMPLATE, template);
-					}
-					else if (line.startsWith(ALTER_COLUMN_TYPE)) {
-						String[] template = buildColumnTypeTokens(line);
+					line = StringUtil.replace(
+						"exec sp_rename '@table@.@old-column@', " +
+							"'@new-column@', 'column';",
+						REWORD_TEMPLATE, template);
+				}
+				else if (line.startsWith(ALTER_COLUMN_TYPE)) {
+					String[] template = buildColumnTypeTokens(line);
 
 						line = StringUtil.replace(
 							"alter table @table@ alter column @old-column@ @type@;",
@@ -191,9 +191,10 @@ public class SQLServerDB extends BaseDB {
 
 						String tableName = tokens[4];
 
-						if (tableName.endsWith(StringPool.SEMICOLON)) {
-							tableName = tableName.substring(0, tableName.length() - 1);
-						}
+					if (tableName.endsWith(StringPool.SEMICOLON)) {
+						tableName = tableName.substring(
+							0, tableName.length() - 1);
+					}
 
 						line = StringUtil.replace(
 							"drop index @table@.@index@;", "@table@", tableName);
@@ -204,10 +205,9 @@ public class SQLServerDB extends BaseDB {
 					sb.append("\n");
 				}
 
-				unsyncBufferedReader.close();
-
-				return sb.toString();
-			}
+			return sb.toString();
+		}
+	}
 
 			private static final String[] _SQL_SERVER = {
 				"--", "1", "0", "'19700101'", "GetDate()", " image", " image", " bit",

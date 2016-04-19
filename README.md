@@ -79,10 +79,11 @@ To install Liferay on SQLServer you must have previously configured a schema for
 I have used an SQLServer Express 2014 installation on Windows 8.1 created on the fly on VirtualBox.
 
 The parameters of my SQLServer instance are:
-* Username: liferayce7
+* Username: liferay
 * Password: liferay12345
+* DB Name: liferayce7
 * FQDN: sqlserverdb.vm.local (IP: 192.168.56.101)
-* TCP/IP Port: 1431
+* TCP/IP Port: 1433
 * Instance ID: SQLEXPRESS
 
 For the installation of Liferay follow the following steps:
