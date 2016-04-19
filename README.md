@@ -17,7 +17,7 @@ To extend support to other databases, Liferay has decided to refactory code to u
 
 In short we must:
 * Implement the SPI interface [com.liferay.portal.kernel.dao.db.DBFactory](https://github.com/liferay/liferay-portal/blob/2960360870ae69360861a720136e082a06c5548f/portal-kernel/src/com/liferay/portal/kernel/dao/db/DBFactory.java). Implementation class inside this project is **SQLServerDBFactory.java**
-* Implement the abstract class [com.liferay.portal.dao.db.BaseDB](https://github.com/liferay/liferay-portal/blob/master/portal-impl/src/com/liferay/portal/dao/db/BaseDB.java) for Oracle DB. Implementation class inside this project is **SQLServerDB.java**
+* Implement the abstract class [com.liferay.portal.dao.db.BaseDB](https://github.com/liferay/liferay-portal/blob/master/portal-impl/src/com/liferay/portal/dao/db/BaseDB.java) for SQL Server DB. Implementation class inside this project is **SQLServerDB.java**
 
 The following code shows how service providers are loaded via SPI.
 ```
@@ -37,7 +37,7 @@ The provider configuration file contains the fully qualified class names (FQDN) 
 Our file is called com.liferay.portal.kernel.dao.db.DBFactory and contain the FQDN of the class [it.dontesta.labs.liferay.portal.dao.db.SQLServerDBFactory](https://github.com/amusarra/liferay-portal-sqlserverdb-support/blob/master/src/main/java/it/dontesta/labs/liferay/portal/dao/db/SQLServerDBFactory.java)
 
 
-In the figure below shows the complete class diagram for OracleDB.
+In the figure below shows the complete class diagram for SQLServerDB.
 
 ![Class Diagram for SQLServerDB](http://www.dontesta.it/blog/wp-content/uploads/2014/02/SQLServerDB.png)
 
@@ -46,9 +46,9 @@ Requirements for build project
 1. Sun/Oracle JDK 1.7
 2. Maven 3.x (for build project) or Gradle 2.x
 
-The driver that adds support for Oracle database is a jar (**liferay-portal-sqlserverdb-support-${version}.jar**) which then will be installed in ROOT/WEB-INF/lib (for apache tomcat).
+The driver that adds support for SQL Server database is a jar (**liferay-portal-sqlserverdb-support-${version}.jar**) which then will be installed in ROOT/WEB-INF/lib (for apache tomcat).
 
-To generate the driver for Oracle database just follow the instructions below.
+To generate the driver for SQL Server database just follow the instructions below.
 
 You can download the binary jar [liferay-portal-sqlserverdb-support-1.0-SNAPSHOT.jar](https://github.com/amusarra/liferay-portal-sqlserverdb-support/releases/download/v1.0/liferay-portal-sqlserverdb-support-1.0-SNAPSHOT.jar), by doing so you can avoid doing the build.
 
