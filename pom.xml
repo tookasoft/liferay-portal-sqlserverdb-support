@@ -4,7 +4,7 @@
   <groupId>it.dontesta.labs.liferay.portal.db</groupId>
   <artifactId>liferay-portal-sqlserverdb-support</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>Liferay Portal Microsoft SQLServer Database Support</name>
   <description>Liferay Portal Microsoft SQLServer Database Support</description>
 	<url>http://www.dontesta.it</url>
