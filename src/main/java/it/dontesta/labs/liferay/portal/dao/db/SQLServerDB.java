@@ -211,7 +211,7 @@ public class SQLServerDB extends BaseDB {
 
 			private static final String[] _SQL_SERVER = {
 				"--", "1", "0", "'19700101'", "GetDate()", " image", " image", " bit",
-				" datetime", " float", " int", " bigint", " nvarchar(2000)",
+				" datetime", " float", " int", " bigint", " nvarchar(4000)",
 				" nvarchar(max)", " nvarchar", "  identity(1,1)", "go"
 			};
 
