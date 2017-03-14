@@ -41,7 +41,7 @@ Our file is called com.liferay.portal.kernel.dao.db.DBFactory and contain the FQ
 
 In the figure below shows the complete class diagram for SQLServerDB.
 
-![Class Diagram for SQLServerDB](http://www.dontesta.it/blog/wp-content/uploads/2014/02/SQLServerDB.png)
+![Class Diagram for SQLServerDB](https://www.dontesta.it/wp-content/uploads/2014/02/SQLServerDB.png)
 
 ## 2. Build project
 Requirements for build project
@@ -140,6 +140,6 @@ Below you can see the portal-ext.properties
     setup.wizard.enabled=false
 ```
 
-![Liferay CE 7 GA1 on SQLServer DB ](http://www.dontesta.it/blog/wp-content/uploads/2014/02/Liferay7CEOnSQLServerDB.png)
+![Liferay CE 7 GA1 on SQLServer DB ](https://www.dontesta.it/wp-content/uploads/2014/02/Liferay7CEOnSQLServerDB.png)
 
-![Liferay CE 7 GA1 on SQLServer DB ](http://www.dontesta.it/blog/wp-content/uploads/2014/02/Liferay7CEOnSQLServerDB_1.png)
+![Liferay CE 7 GA1 on SQLServer DB ](https://www.dontesta.it/wp-content/uploads/2014/02/Liferay7CEOnSQLServerDB_1.png)
