@@ -14,6 +14,8 @@ The Liferay 7 CE GA1 no more support OOTB (Out Of The Box):
 
 This sample project demonstrates how to add support to the Microsoft SQLServer database. Liferay has performed refactorting the code so that it is possible and easy to add support for databases no longer supported OOTB.
 
+[<img src="https://www.dontesta.it/wp-content/uploads/2017/04/PayPalMeAntonioMusarra.png">](https://paypal.me/AntonioMusarra)
+
 ## 1. Introduction
 To extend support to other databases, Liferay has decided to refactory code to use Java [*SPI (Service Provider Interface)*](https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html). SPI is the mechanism that allows you to extend / change the behavior within a system without changing the source. It includes interfaces, classes or methods that the user extends or implements in order to obtain a certain functionality.
 
@@ -45,7 +47,7 @@ In the figure below shows the complete class diagram for SQLServerDB.
 
 ## 2. Build project
 Requirements for build project
-1. Sun/Oracle JDK 1.7
+1. Sun/Oracle JDK 1.8
 2. Maven 3.x (for build project) or Gradle 2.x
 
 The driver that adds support for SQL Server database is a jar (**liferay-portal-sqlserverdb-support-${version}.jar**) which then will be installed in ROOT/WEB-INF/lib (for apache tomcat).
