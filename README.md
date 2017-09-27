@@ -14,11 +14,8 @@ The Liferay 7 CE GA1 no more support OOTB (Out Of The Box):
 
 This sample project demonstrates how to add support to the Microsoft SQLServer database. Liferay has performed refactorting the code so that it is possible and easy to add support for databases no longer supported OOTB.
 
-<<<<<<< HEAD
 **Attention update**: The driver works with the release GA1, GA2, GA3 and GA4 of the Liferay 7 CE.
-=======
 [<img src="https://www.dontesta.it/wp-content/uploads/2017/04/PayPalMeAntonioMusarra.png">](https://paypal.me/AntonioMusarra)
->>>>>>> de5276361c872c009ff752989b9358f0484327c0
 
 ## 1. Introduction
 To extend support to other databases, Liferay has decided to refactory code to use Java [*SPI (Service Provider Interface)*](https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html). SPI is the mechanism that allows you to extend / change the behavior within a system without changing the source. It includes interfaces, classes or methods that the user extends or implements in order to obtain a certain functionality.
@@ -58,10 +55,11 @@ The driver that adds support for SQL Server database is a jar (**liferay-portal-
 
 To generate the driver for SQL Server database just follow the instructions below.
 
-You can download the binary jar [liferay-portal-sqlserverdb-support-1.0.1-SNAPSHOT.jar](https://github.com/amusarra/liferay-portal-sqlserverdb-support/releases/download/v1.0/liferay-portal-sqlserverdb-support-1.0.1-SNAPSHOT.jar), by doing so you can avoid doing the build.
+You can download the binary jar [liferay-portal-sqlserverdb-support-1.0.1-SNAPSHOT.jar](https://github.com/amusarra/liferay-portal-sqlserverdb-support/releases/download/v1.0.1/liferay-portal-sqlserverdb-support-1.0.1-SNAPSHOT.jar), by doing so you can avoid doing the build.
 
 ```
 $ git clone https://github.com/amusarra/liferay-portal-sqlserverdb-support.git
+$ cd liferay-portal-sqlserverdb-support
 $ mvn package
 ```
 
@@ -75,6 +73,7 @@ If you have a Gradle build system, then you can build jar by the following comma
 
 ```
 $ git clone https://github.com/amusarra/liferay-portal-sqlserverdb-support.git
+$ cd liferay-portal-sqlserverdb-support
 $ gradle build
 ```
 
