@@ -1,6 +1,6 @@
 ![travis ci](https://travis-ci.org/amusarra/liferay-portal-sqlserverdb-support.svg?branch=master)
 
-# Welcome to Microsoft SQLServer DB support for Liferay CE 7.0 GA1
+# Welcome to Microsoft SQLServer DB support for Liferay CE 7.0
 
 [![Join the chat at https://gitter.im/amusarra/liferay-portal-sqlserverdb-support](https://badges.gitter.im/amusarra/liferay-portal-sqlserverdb-support.svg)](https://gitter.im/amusarra/liferay-portal-sqlserverdb-support?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -13,6 +13,8 @@ The Liferay 7 CE GA1 no more support OOTB (Out Of The Box):
 * Oracle Database, Microsoft SQL Server, IBM DB2, Sybase DB
 
 This sample project demonstrates how to add support to the Microsoft SQLServer database. Liferay has performed refactorting the code so that it is possible and easy to add support for databases no longer supported OOTB.
+
+**Attention update**: The driver works with the release GA1, GA2, GA3 and GA4 of the Liferay 7 CE.
 
 ## 1. Introduction
 To extend support to other databases, Liferay has decided to refactory code to use Java [*SPI (Service Provider Interface)*](https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html). SPI is the mechanism that allows you to extend / change the behavior within a system without changing the source. It includes interfaces, classes or methods that the user extends or implements in order to obtain a certain functionality.
@@ -52,7 +54,7 @@ The driver that adds support for SQL Server database is a jar (**liferay-portal-
 
 To generate the driver for SQL Server database just follow the instructions below.
 
-You can download the binary jar [liferay-portal-sqlserverdb-support-1.0-SNAPSHOT.jar](https://github.com/amusarra/liferay-portal-sqlserverdb-support/releases/download/v1.0/liferay-portal-sqlserverdb-support-1.0-SNAPSHOT.jar), by doing so you can avoid doing the build.
+You can download the binary jar [liferay-portal-sqlserverdb-support-1.0.1-SNAPSHOT.jar](https://github.com/amusarra/liferay-portal-sqlserverdb-support/releases/download/v1.0/liferay-portal-sqlserverdb-support-1.0.1-SNAPSHOT.jar), by doing so you can avoid doing the build.
 
 ```
 $ git clone https://github.com/amusarra/liferay-portal-sqlserverdb-support.git
@@ -62,7 +64,7 @@ $ mvn package
 the build process create the jar inside the (maven) target directory:
 
 ```
-liferay-portal-sqlserverdb-support-1.0-SNAPSHOT.jar
+liferay-portal-sqlserverdb-support-1.0.1-SNAPSHOT.jar
 ```
 
 If you have a Gradle build system, then you can build jar by the following command
@@ -90,8 +92,8 @@ The parameters of my SQLServer instance are:
 
 For the installation of Liferay follow the following steps:
 
-1. Download [Liferay CE 7 GA1 Tomcat Bundle](https://sourceforge.net/projects/lportal/files/Liferay%20Portal/7.0.0%20GA1/liferay-portal-tomcat-7.0-ce-ga1-20160331161017956.zip/download) from sourceforge
-2. Extract the Liferay bundle (in my case $LIFERAY_HOME is /opt/liferay-portal-7.0-ce-ga1-node-1)
+1. Download [Liferay CE 7 GA4 Tomcat Bundle](https://sourceforge.net/projects/lportal/files/Liferay%20Portal/7.0.3%20GA4/liferay-ce-portal-tomcat-7.0-ga4-20170613175008905.zip/download) from sourceforge
+2. Extract the Liferay bundle (in my case $LIFERAY_HOME is /opt/liferay-ce-portal-7.0-ga4)
 3. Copy the jar **liferay-portal-sqlserverdb-support-${version}.jar** in $LIFERAY_HOME/$TOMCAT_HOME/webapps/ROOT/WEB-INF/lib
 4. Download and install [Microsoft JDBC driver per SQLServer](https://msdn.microsoft.com/it-it/library/mt683464.aspx) in $LIFERAY_HOME/$TOMCAT_HOME/lib/ext
 5. Create the **portal-ext.properties** in $LIFERAY_HOME with the content as the file below. ***You should modify the JDBC connection parameters to the your db and the value of liferay.home***
@@ -128,7 +130,7 @@ Below you can see the portal-ext.properties
     #
     # Specify the Liferay home directory.
     #
-    liferay.home=/opt/liferay-portal-7.0-ce-ga1-node-1
+    liferay.home=/opt/liferay-ce-portal-7.0-ga4
 
 ##
 ## Setup Wizard
