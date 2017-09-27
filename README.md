@@ -1,4 +1,4 @@
-# Welcome to Microsoft SQLServer DB support for Liferay CE 7.0
+# Welcome to MS SQLServer DB support for Liferay CE 7.0
 [![Antonio Musarra's Blog](https://img.shields.io/badge/maintainer-Antonio_Musarra's_Blog-purple.svg?colorB=6e60cc)](https://www.dontesta.it)
 ![travis ci](https://travis-ci.org/amusarra/liferay-portal-sqlserverdb-support.svg?branch=master)
 [![Join the chat at https://gitter.im/amusarra/liferay-portal-sqlserverdb-support](https://badges.gitter.im/amusarra/liferay-portal-sqlserverdb-support.svg)](https://gitter.im/amusarra/liferay-portal-sqlserverdb-support?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
