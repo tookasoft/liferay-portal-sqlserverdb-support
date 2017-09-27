@@ -1,8 +1,8 @@
-![travis ci](https://travis-ci.org/amusarra/liferay-portal-sqlserverdb-support.svg?branch=master)
-
 # Welcome to Microsoft SQLServer DB support for Liferay CE 7.0
-
+[![Antonio Musarra's Blog](https://img.shields.io/badge/maintainer-Antonio_Musarra's_Blog-purple.svg?colorB=6e60cc)](https://www.dontesta.it)
+![travis ci](https://travis-ci.org/amusarra/liferay-portal-sqlserverdb-support.svg?branch=master)
 [![Join the chat at https://gitter.im/amusarra/liferay-portal-sqlserverdb-support](https://badges.gitter.im/amusarra/liferay-portal-sqlserverdb-support.svg)](https://gitter.im/amusarra/liferay-portal-sqlserverdb-support?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Twitter Follow](https://img.shields.io/twitter/follow/antonio_musarra.svg?style=social&label=%40antonio_musarra%20on%20Twitter&style=plastic)](https://twitter.com/antonio_musarra)
 
 Those who follow Liferay is aware of the fact that the Community Edition version 7 of Liferay, were eliminated quite a bit of components App Server, Database & Clustering Support. For more detail information you can read the blog post by [Bryan Cheung]( https://www.liferay.com/it/web/bryan.cheung/blog/-/blogs/liferay-portal-7-ce-app-server-database-clustering-support) published on April 7, 2016.
 
